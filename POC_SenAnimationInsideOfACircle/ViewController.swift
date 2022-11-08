@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    private let myCircle: myCircleView = {
+    private let myCircleWithAWaveInside: myCircleView = {
         let circle = myCircleView(frame: .zero, sizeOfTheCircle: 300)
         circle.translatesAutoresizingMaskIntoConstraints = false
         return circle
@@ -30,15 +30,15 @@ extension ViewController: ViewCoding {
     }
     
     func setupHierarchy() {
-        view.addSubview(myCircle)
+        view.addSubview(myCircleWithAWaveInside)
     }
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            myCircle.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            myCircle.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            myCircle.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            myCircle.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            myCircleWithAWaveInside.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            myCircleWithAWaveInside.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            myCircleWithAWaveInside.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            myCircleWithAWaveInside.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
         ])
     }
     
